@@ -1,3 +1,4 @@
 Just a Ruby on Rails blog builded from scratch by me.
 
-I will write something here when I feel I should.
+I am using Bootstrap blog template - Clean blog
+which can be found at http://startbootstrap.com/template-overviews/clean-blog/
