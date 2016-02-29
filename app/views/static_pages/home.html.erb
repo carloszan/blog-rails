@@ -4,7 +4,7 @@
 
             <% @posts.each do |post| %>
               <div class="post-preview">
-                  <a href="post.html">
+                  <a href="post.html"> <!-- @post acctualy. didnt working yet -->
                       <h2 class="post-title">
                           <%= post.title %>
                       </h2>
@@ -12,7 +12,8 @@
                           <%= post.text %>
                       </h3>
                   </a>
-                  <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> <%= post.updated_at %></p>
+                  <p class="post-meta">Posted by <a href="#">Start Bootstrap</a>
+                    <%= post.updated_at %> </p>
               </div>
               <hr>
             <% end %>
