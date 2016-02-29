@@ -15,4 +15,12 @@ class PostTest < ActiveSupport::TestCase
     p.text = "Texto"
     assert p.valid?
   end
+
+  test "title too long" do
+    p = Post.new
+    title = "a"*21
+    p.title = title
+    p.text = "texto"
+    assert_not p.valid?
+  end
 end

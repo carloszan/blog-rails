@@ -1,4 +1,7 @@
 class Post < ActiveRecord::Base
-  validates_presence_of :title
-  validates_presence_of :text
+
+  validates :title, presence: true, length: { maximum: 20 }
+  validates :text, presence: true
+
+  belongs_to :author
 end
