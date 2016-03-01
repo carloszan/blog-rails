@@ -12,7 +12,7 @@
                           <%= post.text %>
                       </h3>
                   <% end %>
-                  <p class="post-meta">Posted by <a href="#">Start Bootstrap</a>
+                  <p class="post-meta">Posted by <%= post.author.name %>
                     <%= post.updated_at %> </p>
               </div>
               <hr>

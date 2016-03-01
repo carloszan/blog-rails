@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
 
+  before_action :must_logged,    only: [:new, :create, :edit, :update, :destroy]
+  before_action :correct_author, only: [:edit, :update, :destroy]
+
   def index
     @posts = Post.order(created_at: :desc)
   end
@@ -10,6 +13,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.author = current_author
     if @post.save
       redirect_to root_url
     else
@@ -44,6 +48,11 @@ class PostsController < ApplicationController
 
     def post_params
       params.require(:post).permit(:title, :text)
+    end
+
+    def correct_author
+      @post = Post.find_by(id: params[:id])
+      redirect_to root_url unless current_author.id == @post.author_id
     end
 
 end
