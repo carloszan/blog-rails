@@ -1,3 +1,5 @@
+{<img src="https://codeclimate.com/github/carloszan/blog-rails/badges/gpa.svg" />}[https://codeclimate.com/github/carloszan/blog-rails]
+
 Just a Ruby on Rails blog builded from scratch by me.
 
 I am using Bootstrap blog template - Clean blog
