@@ -13,7 +13,7 @@
                       </h3>
                   <% end %>
                   <p class="post-meta">Posted by <%= post.author.name %>
-                    <%= post.updated_at %> </p>
+                    <%= post.updated_at.to_formatted_s(:short)  %> </p>
               </div>
               <hr>
             <% end %>

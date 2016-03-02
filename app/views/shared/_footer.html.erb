@@ -28,6 +28,12 @@
                         </a>
                     </li>
                 </ul>
+                <div class="text-center text-muted">Looking for something?
+                  <%= form_tag(posts_path, method: :get, id: "search-form") do %>
+                  <%= text_field_tag :search, params[:search], placeholder: "Search something" %>
+                  <%= submit_tag "Go" %>
+                  <% end %>
+                </div>
                 <p class="copyright text-muted">Copyright &copy; CleanBlog Bootstrap</p>
             </div>
         </div>

@@ -20,16 +20,13 @@
                 <li>
                     <%= link_to "About", about_path %>
                 </li>
+                <li>
+                  <%= link_to "Contact", contact_path %>
+                </li>
                 <% if logged_in? %>
                 <li>
                     <%= link_to "Create a post", new_post_path %>
                 </li>
-                <% end %>
-                <li>
-                    <%= link_to "Contact", contact_path %>
-                </li>
-
-                <% if logged_in? %>
                 <li>
                     <%= link_to "Log out", logout_path, method: "delete" %>
                 </li>

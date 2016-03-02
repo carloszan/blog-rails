@@ -4,4 +4,8 @@ class Post < ActiveRecord::Base
   validates :text, presence: true
 
   belongs_to :author
+
+  def self.search(search)
+    where("text || title LIKE ?", "%#{search}%")
+  end
 end

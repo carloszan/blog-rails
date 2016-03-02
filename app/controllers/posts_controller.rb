@@ -5,6 +5,9 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order(created_at: :desc)
+    if params[:search]
+      @posts = Post.search(params[:search]).order(created_at: :desc)
+    end
   end
 
   def new
