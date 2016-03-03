@@ -9,7 +9,7 @@
                           <%= post.title %>
                       </h2>
                       <h3 class="post-subtitle">
-                          <%= post.text %>
+                          <%= post.text_limit(60) %>
                       </h3>
                   <% end %>
                   <p class="post-meta">Posted by <%= post.author.name %>

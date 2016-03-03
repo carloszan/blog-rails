@@ -18,7 +18,7 @@ class PostTest < ActiveSupport::TestCase
 
   test "title too long" do
     p = Post.new
-    title = "a"*21
+    title = "a"*36
     p.title = title
     p.text = "texto"
     assert_not p.valid?
