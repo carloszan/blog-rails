@@ -6,6 +6,6 @@ class Post < ActiveRecord::Base
   belongs_to :author
 
   def self.search(search)
-    where("text || title LIKE ?", "%#{search}%")
+    where("text || title ILIKE ?", "%#{search}%")
   end
 end
