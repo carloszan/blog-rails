@@ -10,7 +10,9 @@
 
                 <%= @post.text %>
                 <br>
-                <%= link_to "Edit", edit_post_path, class: "btn btn-default" %>
+                <% if logged_in? %>
+                  <%= link_to "Edit", edit_post_path, class: "btn btn-default" %>
+                <% end %>
             </div>
         </div>
     </div>
