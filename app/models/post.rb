@@ -5,6 +5,9 @@ class Post < ActiveRecord::Base
 
   belongs_to :author
 
+  has_many :post_to_tags
+  has_many :tags, through: :post_to_tags
+
   def self.search(search)
     where("text || title ILIKE ?", "%#{search}%")
   end
