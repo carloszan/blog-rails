@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   validates :text, presence: true
 
   belongs_to :author
+  has_and_belongs_to_many :tags
 
   def self.search(search)
     where("text || title ILIKE ?", "%#{search}%")
