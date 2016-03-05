@@ -8,10 +8,11 @@
 
 Author.create(email: "c@c.com", name: "Carlos", password: "123456",
                                                 password_confirmation: "123456")
+
+@first_tag = Tag.first_or_create!(name: "ruby")
+Tag.first_or_create!(name: "loucura")
+
 (1..100).each do |i|
-  Post.create(title: i, text: "LOREM IPSUM FODIDO", author_id: 1)
-
-Tag.create(name: "ruby")
-Tag.create(name: "loucura")
-
+  Post.create(title: i, text: "LOREM IPSUM FODIDO", author_id: 1,
+                                                    tags: [@first_tag])
 end

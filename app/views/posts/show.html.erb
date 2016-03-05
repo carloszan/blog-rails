@@ -10,6 +10,14 @@
 
                 <%= @post.text %>
                 <br>
+
+                <div class="text-center text-muted">
+                  tags:
+                  <% @post.tags.each do |tag| %>
+                    <%= link_to tag.name, tag_path(tag) %>
+                  <% end %>
+                </div>
+
                 <% if current_author == @post.author %>
                   <%= link_to "Edit", edit_post_path, class: "btn btn-default" %>
                 <% end %>

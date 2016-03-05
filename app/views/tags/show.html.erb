@@ -1,0 +1,5 @@
+<div class="text-center">
+  <% @tag.posts.each do |post| %>
+    <%= link_to post.title, post %> <br>
+  <% end %>
+</div>

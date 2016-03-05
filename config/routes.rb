@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
 
-  get 'sessions/new'
+  get 'tags/:id'   => 'tags#show', as: 'tag'
+  get 'tags'       => 'tags#index'
 
   resources :posts
 
