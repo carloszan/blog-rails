@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   before_action :correct_author, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.order(created_at: :desc)
+    @posts = Post.paginate(page: params[:page], per_page: 10)
+                 .order(created_at: :desc)
     if params[:search]
       @posts = Post.search(params[:search]).order(created_at: :desc)
     end

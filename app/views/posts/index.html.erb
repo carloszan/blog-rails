@@ -12,11 +12,12 @@
                           <%= post.text_limit(60) %>
                       </h3>
                   <% end %>
-                  <p class="post-meta">Posted by <%= post.author.name %>
+                  <p class="post-meta">Posted by <%= post.author.name %> on
                     <%= post.updated_at.to_formatted_s(:short)  %> </p>
               </div>
               <hr>
             <% end %>
+            <%= will_paginate @posts %>
 
             <!-- Pager
             <ul class="pager">
