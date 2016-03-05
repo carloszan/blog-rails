@@ -10,7 +10,7 @@
 
                 <%= @post.text %>
                 <br>
-                <% if logged_in? %>
+                <% if current_author == @post.author %>
                   <%= link_to "Edit", edit_post_path, class: "btn btn-default" %>
                 <% end %>
             </div>

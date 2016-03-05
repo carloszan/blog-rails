@@ -11,12 +11,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = current_author.posts.new
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.author = current_author
+    @post = current_author.posts.new(post_params)
     if @post.save
       redirect_to root_url
     else
@@ -50,12 +49,12 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :text)
+      params.require(:post).permit(:title, :text, :all_tags)
     end
 
     def correct_author
       @post = Post.find_by(id: params[:id])
-      redirect_to root_url unless current_author.id == @post.author_id
+      redirect_to root_url unless current_author == @post.author
     end
 
 end
