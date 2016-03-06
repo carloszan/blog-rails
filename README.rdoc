@@ -1,5 +1,5 @@
 {<img src="https://codeclimate.com/github/carloszan/blog-rails/badges/gpa.svg" />}[https://codeclimate.com/github/carloszan/blog-rails]
-{<img src="https://codeclimate.com/github/carloszan/blog-rails/badges/gpa.svg" />}[https://codeclimate.com/github/carloszan/blog-rails]
+{<img src="https://codeclimate.com/github/carloszan/blog-rails/badges/coverage.svg" />}[https://codeclimate.com/github/carloszan/blog-rails/coverage]
 
 Just a Ruby on Rails blog builded from scratch by me.
 
