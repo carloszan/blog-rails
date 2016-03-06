@@ -1,10 +1,7 @@
-<%= form_for @post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %><br />
+<%= simple_form_for @post do |f| %>
 
-  <%= f.label :text %>
-  <%= f.text_field :text %> <br />
-
+  <%= f.input :title %>
+  <%= f.input :text %>
   <%= f.text_field :all_tags, placeholder: "Put tags with a comma" %> <br>
-  <%= f.submit %>
+  <%= f.button :submit %>
 <% end %>
