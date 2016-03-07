@@ -17,8 +17,9 @@
               </div>
               <hr>
             <% end %>
-            <%= will_paginate @posts %>
-
+            <div class="dickr_pagination text-center">
+              <%= will_paginate @posts, page_links: false %>
+            </div>
             <!-- Pager
             <ul class="pager">
                 <li class="next">
