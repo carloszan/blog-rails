@@ -1,11 +1,11 @@
 <div class="text-center">
-  <%= form_for(:session, url: login_path) do |f| %>
+  <%= simple_form_for(:session, url: login_path, html: { class: 'form-horizontal' }) do |f| %>
     <%= f.label :email %>
     <%= f.email_field :email %> <br>
 
     <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password %><br>
 
-    <%= f.submit "Log in" %>
+    <%= f.button :submit %>
   <% end %>
 </div>
