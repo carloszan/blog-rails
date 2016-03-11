@@ -9,4 +9,15 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def is_logged_in?
+    !session[:author_id].nil?
+  end
+
+  def log_in(author)
+    session[:author_id] = author.id
+  end
+
+  def current_author
+    @current_author ||= Author.find_by(id: session[:author_id])
+  end
 end

@@ -20,6 +20,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'spring', '~> 1.6', '>= 1.6.3'
   gem "codeclimate-test-reporter", require: nil
+  gem 'faker', '~> 1.6', '>= 1.6.3'
 end
 group :development do
   gem 'web-console', '~> 3.1', '>= 3.1.1'

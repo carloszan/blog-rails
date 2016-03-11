@@ -1,1 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+carlos:
+  name: Carlos Zansavio
+  email: c@c.com
+  password_digest: <%= Author.digest('password') %>
+  #$password_confirmation: 123456

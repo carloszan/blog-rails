@@ -12,4 +12,11 @@ class Author < ActiveRecord::Base
 
   before_save { self.email = email.downcase }
 
+  # Returns the hash digest of the given string. FOR TEST
+  def self.digest(string)
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                  BCrypt::Engine.cost
+    BCrypt::Password.create(string, cost: cost)
+  end
+
 end
